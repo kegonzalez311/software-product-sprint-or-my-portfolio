@@ -1,5 +1,6 @@
 package com.google.sps.servlets;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,5 +18,15 @@ public class PortfolioServlet extends HttpServlet {
 
     response.setContentType("text/html;");
     response.getWriter().println("<h1>Hello World</h1>");
+  }
+
+  /**
+   * Converts a ServerStats instance into a JSON string using the Gson library. Note: We first added
+   * the Gson library dependency to pom.xml.
+   */
+  private String convertToJsonUsingGson() {
+    Gson gson = new Gson();
+    String json = gson.toJson();
+    return json;
   }
 }

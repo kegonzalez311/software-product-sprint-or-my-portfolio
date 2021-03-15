@@ -7,3 +7,59 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+body {
+    background-color: #E6F9AF;
+}
+
+img {
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-shadow: 0.5px 0.5px black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #8BBEB2;
+  color: white;
+}
+
+#greeting-container {
+    margin: 30px;
+}
+
+button {
+  background-color: white; 
+  border: 1.5px solid black;
+  border-radius: 10%;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}

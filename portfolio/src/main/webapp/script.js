@@ -31,3 +31,12 @@ async function showHi() {
   const hiContainer = document.getElementById('hi-container');
   hiContainer.innerText = textFromResponse;
 }
+
+/** Fetches stats from the server and adds them to the page. */
+async function getPhrases() {
+  const responseFromServer = await fetch('/hi');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const myPhrases = await responseFromServer.json();
+  console.log(myPhrases);
+}

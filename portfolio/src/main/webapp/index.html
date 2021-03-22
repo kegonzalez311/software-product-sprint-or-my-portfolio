@@ -8,20 +8,48 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <img src="/portfolio/images/IMG-0647.jpg" />
-      <h1>Karla's Portfolio</h1>
-      <p>My name is Karla Gonzalez. I am a sophomore at Gettysburg College, majoring in Computer Science and minoring in Spanish.</p>
-      <a href="https://www.linkedin.com/in/karla-gonzalez-318367195/">Here is my LinkedIn</a>
-      <a href="https://github.com/kegonzalez311">Here is my GitHub</a>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+    </div>
 
+    <br>
+    <br>
+
+    <div id="content">
+      <img src="/images/IMG-3043.jpg" style="width:185px;height:250px; display: block; margin-left: auto; margin-right: auto;"/>
+      
+      <h2 style="text-align:center">Karla's Portfolio</h2>
+
+      <p>My name is Karla Gonzalez. I am a sophomore at Gettysburg College, majoring in Computer Science and minoring in Spanish.</p>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="https://www.linkedin.com/in/karla-gonzalez-318367195/"><img src="/images/linkedin.png" style="width:200px;height:50px;"/></a>
+      <br>
+      <a href="https://github.com/kegonzalez311"><img src="/images/github.png" style="width:200px;height:100px;"/></a>
+    </div>
+
+    <div style ="text-align:center;">
       <p>A couple of things that I like are makeup, drawing & painting, and spending time with my dog.</p>
       <p>Over quarantine I have gotten the chance to pick up some new hobbies, such as, growing a green thumb and bullet journaling.</p>
 
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+      <p>Click <a href="/hi">here</a> to see content created by server code.</p>
       <p>Click here to see my favorite quote from The Office:</p>
-      <button onclick="addRandomGreeting()"> Hello! </button>
+      <button onclick="addRandomGreeting()"> The Office </button>
       <div id="greeting-container"></div>
+
+      <button onclick="showHi();"> Get Greeting </button>
+      <p id="hi-container"></p>
     </div>
+
+    <form action="/form-handler" method="POST">
+        <p><strong>Contact Me:</strong></p>
+        <textarea name="text-input">Enter your email :)</textarea>
+        <br/>
+        <input type="submit" />
+    </form>
+
   </body>
 </html>

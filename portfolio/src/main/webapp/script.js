@@ -16,13 +16,27 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const greetings = "Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way. - Michael Scott";
 
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  greetingContainer.innerText = greetings;
+}
+
+/** Fetches the current date from the server and adds it to the page. */
+async function showHi() {
+  const responseFromServer = await fetch('/hi');
+  const textFromResponse = await responseFromServer.text();
+
+  const hiContainer = document.getElementById('hi-container');
+  hiContainer.innerText = textFromResponse;
+}
+
+/** Fetches stats from the server and adds them to the page. */
+async function getPhrases() {
+  const responseFromServer = await fetch('/hi');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const myPhrases = await responseFromServer.json();
+  console.log(myPhrases);
 }
